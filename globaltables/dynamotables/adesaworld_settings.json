@@ -1,0 +1,23 @@
+{
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "settingname", 
+                "AttributeType": "S"
+            }
+        ], 
+        "ProvisionedThroughput": {
+            "WriteCapacityUnits": 5, 
+            "ReadCapacityUnits": 5
+        }, 
+        "TableName": "adesaworld_settings", 
+        "StreamSpecification": {
+            "StreamViewType": "NEW_AND_OLD_IMAGES", 
+            "StreamEnabled": true
+        }, 
+        "KeySchema": [
+            {
+                "KeyType": "HASH", 
+                "AttributeName": "settingname"
+            }
+        ]
+}
